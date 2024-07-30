@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "order"
+    },
+    "address": {
+      "type": "string"
+    },
+    "cartItems": {
+      "type": "json"
+    },
+    "numItemsInCart": {
+      "type": "biginteger"
+    },
+    "cartTotal": {
+      "type": "float"
+    },
+    "name": {
+      "type": "string"
+    },
+    "orderTotal": {
+      "type": "string"
+    }
+  }
+}
